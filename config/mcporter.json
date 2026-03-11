@@ -1,0 +1,7 @@
+{
+  "name": "weather",
+  "command": "node",
+  "args": ["dist/index.js"],
+  "description": "Weather MCP Server (Open-Meteo demo)",
+  "env": {}
+}
