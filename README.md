@@ -20,6 +20,8 @@
 
 <p align="center">A GitHub template for building <strong>OpenClaw / Claude Code / Cursor</strong> compatible Skill + MCP Server + API integrations.</p>
 
+<p align="center"><strong>English</strong> | <a href="README_CN.md">中文</a></p>
+
 ---
 
 ## 🤔 Why This Template?
