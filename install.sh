@@ -36,8 +36,11 @@ info "Server name: $SERVER_NAME"
 # --- Step 4: Register MCP Server with mcporter (optional) ---
 if command -v mcporter &>/dev/null; then
   info "Registering MCP server with mcporter..."
-  mcporter add "$SERVER_NAME" --command "node" --args "$SCRIPT_DIR/dist/index.js"
-  info "MCP server registered: $SERVER_NAME"
+  if mcporter add "$SERVER_NAME" --command "node" --args "$SCRIPT_DIR/dist/index.js" 2>/dev/null; then
+    info "MCP server registered: $SERVER_NAME"
+  else
+    warn "mcporter registration failed. You may need to register manually."
+  fi
 else
   warn "mcporter not found. Skipping MCP registration."
   warn "To use with Claude Code, add to your MCP config manually:"
